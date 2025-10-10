@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Absensi Komsel MW</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./image/1750388649897-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Absensi Komsel MW</h2>
+            <p id="tanggal"></p>
+        </header>
+        
+        <main>
+            <section class="search-section">
+                <h2>Cari Nama Siswa</h2>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Ketik nama untuk mencari...">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+                <button id="addNewNameBtn" class="add-name-btn">+ Tambah Nama Baru</button>
+            </section>
+            
+            <section class="attendance-section">
+                <div class="section-header">
+                    <h2>Daftar Absensi</h2>
+                    <div class="action-buttons">
+                        <button id="copyButton" class="copy-btn">Salin Data</button>
+                        <button id="clearAllBtn" class="clear-btn">Hapus Semua</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="attendanceTable">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Waktu</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendanceBody">
+                            <!-- Data absensi akan ditambahkan di sini -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="summary">
+                    <p>Total Hadir: <span id="totalAttendance">0</span> orang</p>
+                </div>
+            </section>
+        </main>
+        
+    </div>
+    
+    <!-- Modal untuk menambah nama baru -->
+    <div id="addNameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tambah Nama Baru</h2>
+            <div class="form-group">
+                <label for="newNameInput">Nama Lengkap:</label>
+                <input type="text" id="newNameInput" placeholder="Masukkan nama lengkap">
+            </div>
+            <div class="modal-buttons">
+                <button id="confirmAdd" class="btn-confirm">Tambah</button>
+                <button id="cancelAdd" class="btn-cancel">Batal</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal untuk menghapus data -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Hapus Data</h2>
+            <p id="deleteMessage">Apakah Anda yakin ingin menghapus data ini?</p>
+            <div class="modal-buttons">
+                <button id="confirmDelete" class="btn-delete">Ya, Hapus</button>
+                <button id="cancelDelete" class="btn-cancel">Batal</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p class="cp">&copy; 2025 Absensi Komsel Mulia Wacana. All rights are reserved</p>
+        <div class="logo">
+            <img src="./image/1750388649897-removebg-preview.png" alt="">
+            <img src="./image/Screenshot_20250607-113017-removebg-preview.png" alt="" class="mw">
+        </div>
+        <h3>Maked by OSIS HINENI Mulia Wacana School</h3>
+        <br/>
+        <p>Cabang Cibaduyut : Indonesia, Prov. Jawa Barat, Kab.Bandung, Kec.Dayeuhkolot, Perumahan Taman Cibaduyut Indah, Blok. F, No.232</p>
+        <hr style="margin:10px;">
+        <p>Cabang Baleeendah : Indonesia, Prov.Jawa Barat, Kab.Bandung, Kec.Baleendah, Jl. Adikusumah No. 127</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
