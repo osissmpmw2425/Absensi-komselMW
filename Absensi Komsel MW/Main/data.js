@@ -97,7 +97,7 @@ function loadNamesFromStorage() {
             "Cinta (6)",
             "Sesil (6)",
             "Januar (6)",
-            "Gracela (6)",
+            "Gracela (6)","Sandi (6)",
             // Kelas 6 BE
             "Eguel (6)",
             "Timothy (6)",
