@@ -222,7 +222,7 @@ function copyAttendanceData() {
     textToCopy += "No. \tNama\t\tWaktu\n";
     
     attendanceData.forEach((record, index) => {
-        textToCopy += `${index + 1}\t${record.name}\t${record.time}\n`;
+        textToCopy += `${index + 1}. \t${record.name}\t\n`;
     });
     
     // Salin ke clipboard
