@@ -219,7 +219,7 @@ function copyAttendanceData() {
     // Format data untuk disalin
     let textToCopy = "DAFTAR ABSENSI KOMSEL MULIA WACANA\n";
     textToCopy += "Tanggal: " + document.getElementById('tanggal').textContent + "\n\n";
-    textToCopy += "No.\tNama\t\tWaktu\n";
+    textToCopy += "No. \tNama\t\tWaktu\n";
     
     attendanceData.forEach((record, index) => {
         textToCopy += `${index + 1}\t${record.name}\t${record.time}\n`;
